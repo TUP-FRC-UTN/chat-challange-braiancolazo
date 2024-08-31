@@ -1,0 +1,16 @@
+<p>Sala de Chat</p>
+<div>
+    @for (m of mensajeria; track $index) {
+        <p>{{m.usuario}}: {{m.contenido}}</p>
+    }
+</div>
+<div class="row">
+    <div class="col-6">
+        <app-chat [user]="'Pepe'" (enviarMensaje)="guardarMensaje($event)"></app-chat>
+    </div>
+    <div class="col-6">
+        <app-chat [user]="'Juan'" (enviarMensaje)="guardarMensaje($event)"></app-chat>
+    </div>
+</div>
+
+
